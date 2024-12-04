@@ -47,9 +47,9 @@ def check_and_create_new_models(jamf_items: list, snipeit_models: list):
     for item in jamf_items:
         if not any(model.model_number == item.model_identifier for model in snipeit_models):
             print(f"New model found: {item.model_name}")
-            a = create_snipeit_model(ModelItem(model_name=item.model_name, model_number=item.model_identifier))
-            print(a)
-            if a['status'] != 'success':
+            req = create_snipeit_model(ModelItem(model_name=item.model_name, model_number=item.model_identifier))
+            print(req)
+            if req['status'] != 'success':
                 print(f"Error creating model: {item.model_name}")
                 continue
             print(f"New model created: {item.model_name}")
