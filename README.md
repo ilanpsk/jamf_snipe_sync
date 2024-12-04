@@ -52,24 +52,25 @@ This project synchronizes items and users between Jamf and Snipe-IT asset manage
 Run the script to synchronize items and users:
 ```sh
 python app.py
+```
 
+## Models
 
-Models
-JamfItem
-Represents a model in the Jamf asset management system.
-Attributes:
+### `JamfItem`
+Represents a model in the Jamf asset management system.  
+**Attributes**:  
+- `name` (str): The name of the item.
+- `serial_number` (str): The serial number of the item.
+- `model_identifier` (str): The model identifier.
+- `assigned_user` (Optional[str]): The user assigned to the item.
+- `model_name` (str): The name of the model.
 
-name (str): The name of the item.
-serial_number (str): The serial number of the item.
-model_identifier (str): The model identifier.
-assigned_user (Optional[str]): The user assigned to the item.
-model_name (str): The name of the model.
-SnipeItItem
-Represents a model in the Snipe-IT asset management system.
-Attributes:
+### `SnipeItItem`
+Represents a model in the Snipe-IT asset management system.  
+**Attributes**:  
+- `name` (str): The name of the item.
+- `serial` (str): The serial number of the item.
+- `assigned_user` (Optional[str]): The user assigned to the item.
+- `model` (str): The model name.
+- `model_number` (str): The model number.
 
-name (str): The name of the item.
-serial (str): The serial number of the item.
-assigned_user (Optional[str]): The user assigned to the item.
-model (str): The model name.
-model_number (str): The model number.
