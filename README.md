@@ -1,4 +1,4 @@
-# Asset Management Synchronization
+# JAMF Asset to Snipe-IT Synchronization
 
 This project synchronizes items and users between Jamf and Snipe-IT asset management systems.
 
